@@ -14,6 +14,7 @@ import java.util.HashMap;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -37,9 +38,9 @@ class JwtServiceTest {
         ReflectionTestUtils.setField(jwtService, "refreshExpiration", 86_400_000L);
         userDetails = mock(UserDetails.class);
         when(userDetails.getUsername()).thenReturn("usuario-prueba");
-        when(userDetails.getAuthorities()).thenReturn(
-                Collections.singletonList(new SimpleGrantedAuthority("ROLE_ADMIN"))
-        );
+        doReturn(Collections.singletonList(new SimpleGrantedAuthority("ROLE_ADMIN")))
+                .when(userDetails)
+                .getAuthorities();
     }
 
     @Test
