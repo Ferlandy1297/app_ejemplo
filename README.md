@@ -12,18 +12,21 @@ Proyecto base refactorizado para que el navegador se comunique únicamente con N
 
 Requisitos: Docker Desktop iniciado.
 
+Crear la configuración local antes del primer arranque:
+
+```bash
+cp .env.example .env
+```
+
+En Windows CMD se puede usar `copy .env.example .env`. Después deben reemplazarse ambos marcadores del archivo `.env`; ese archivo queda ignorado por Git.
+
 ```bash
 docker compose up --build
 ```
 
 Abrir <http://localhost:3000>.
 
-Credenciales disponibles:
-
-| Perfil | Correo | Contraseña |
-| --- | --- | --- |
-| Administrador | `admin@empresa.com` | `admin123` |
-| Consulta | `user@empresa.com` | `user123` |
+Las credenciales de demostración se comparten por separado y no se publican en el repositorio.
 
 El contenedor backend solo está disponible dentro de la red de Docker. El navegador no llama al puerto `8080`; todas sus solicitudes utilizan `http://localhost:3000/api/...`.
 

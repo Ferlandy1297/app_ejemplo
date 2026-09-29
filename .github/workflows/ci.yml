@@ -1,0 +1,39 @@
+name: Verificacion del laboratorio
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  frontend:
+    name: Frontend Next.js
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: app_ejemplo
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: app_ejemplo/package-lock.json
+      - run: npm ci
+      - run: npm run build
+
+  backend:
+    name: Backend Spring Boot
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: app_ejemplo_backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: maven
+      - run: mvn --batch-mode test

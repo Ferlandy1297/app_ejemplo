@@ -1,0 +1,26 @@
+# Sistemas operativos y editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Repositorios o metadatos anidados del ZIP original
+**/.git/
+__MACOSX/
+
+# Frontend Next.js y aplicación móvil
+**/node_modules/
+**/.next/
+**/.expo/
+**/dist/
+**/coverage/
+**/.env
+**/.env.local
+**/*.tsbuildinfo
+
+# Backend Spring Boot
+**/target/
+
+# Logs
+*.log
+npm-debug.log*

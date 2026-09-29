@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/changes/001-create-roles-and-users.sql
+  - include:
+      file: db/changelog/changes/002-create-clients.sql
+  - include:
+      file: db/changelog/changes/003-create-categories-and-products.sql
+  - include:
+      file: db/changelog/changes/004-create-suppliers.sql
+  - include:
+      file: db/changelog/changes/005-seed-initial-data.sql

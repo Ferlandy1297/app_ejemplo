@@ -1,0 +1,80 @@
+[
+  {
+    "id": "p001",
+    "sku": "HER-001",
+    "name": "Taladro Inalámbrico 20V DeWalt",
+    "category": "Herramientas",
+    "sellingPrice": 145.00,
+    "costPrice": 95.00,
+    "stock": 18,
+    "minStock": 5,
+    "unit": "Unidad",
+    "description": "Taladro percutor inalámbrico con 2 baterías de litio y cargador rápido.",
+    "imageUrl": "https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "p002",
+    "sku": "HER-002",
+    "name": "Juego de Destornilladores Stanley (10 Piezas)",
+    "category": "Herramientas",
+    "sellingPrice": 24.50,
+    "costPrice": 14.00,
+    "stock": 42,
+    "minStock": 10,
+    "unit": "Juego",
+    "description": "Set de destornilladores de cromo vanadio con punta magnética.",
+    "imageUrl": "https://images.unsplash.com/photo-1581147036324-c17ac41dfa6c?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "p003",
+    "sku": "PIN-001",
+    "name": "Pintura Látex Blanca Cubeta 5 Galones",
+    "category": "Pinturas",
+    "sellingPrice": 68.00,
+    "costPrice": 45.00,
+    "stock": 12,
+    "minStock": 4,
+    "unit": "Cubeta",
+    "description": "Pintura lavable para interiores y exteriores con acabado mate.",
+    "imageUrl": "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "p004",
+    "sku": "PLO-001",
+    "name": "Tubo PVC de Agua Potable 1/2 pulgada (6 metros)",
+    "category": "Plomería",
+    "sellingPrice": 8.50,
+    "costPrice": 4.80,
+    "stock": 3,
+    "minStock": 15,
+    "unit": "Tubo",
+    "description": "Tubo de PVC rígido alta presión para agua fría.",
+    "imageUrl": "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "p005",
+    "sku": "ELE-001",
+    "name": "Cable Eléctrico THHN Calibre 12 (Rollo 100m)",
+    "category": "Electricidad",
+    "sellingPrice": 89.90,
+    "costPrice": 60.00,
+    "stock": 8,
+    "minStock": 3,
+    "unit": "Rollo",
+    "description": "Cable de cobre suave con aislamiento termoplástico resistente al calor.",
+    "imageUrl": "https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": "p006",
+    "sku": "CON-001",
+    "name": "Cemento Gris Portland (Saco 42.5kg)",
+    "category": "Construcción",
+    "sellingPrice": 11.50,
+    "costPrice": 8.50,
+    "stock": 120,
+    "minStock": 30,
+    "unit": "Saco",
+    "description": "Cemento de alta resistencia para estructuras de concreto y acabados.",
+    "imageUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80"
+  }
+]

@@ -1,0 +1,53 @@
+server:
+  port: ${PORT:8080}
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: ferreteria-backend
+
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/ferreteria_db}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: validate # Liquibase gestiona toda la creación y modificación del esquema
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+    drop-first: false
+
+# Configuración JWT
+security:
+  jwt:
+    secret-key: ${JWT_SECRET}
+    expiration-time: ${JWT_EXPIRATION:60000} # 1 minuto para demostrar el refresh
+    refresh-expiration-time: ${JWT_REFRESH_EXPIRATION:86400000} # 24 horas
+
+demo:
+  users:
+    admin:
+      email: ${DEMO_ADMIN_EMAIL}
+      password: ${DEMO_ADMIN_PASSWORD}
+    operator:
+      email: ${DEMO_OPERATOR_EMAIL}
+      password: ${DEMO_OPERATOR_PASSWORD}
+
+# Configuración Swagger / OpenAPI
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+    tags-sorter: alpha
